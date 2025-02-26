@@ -16,6 +16,12 @@ rev_content = c_val[::-1]
 
 ws['A2'] = rev_content
 
-wb.save('my_workbook.xlsx')
+ws.cell(row=2, column=2, value='Under reversed')
 
 print(ws['A2'].value)
+
+c_val2 = ws.cell(row=2, column=2).value
+
+print(f'A2 2nd row value: {c_val2}')
+
+wb.save('my_workbook.xlsx')
